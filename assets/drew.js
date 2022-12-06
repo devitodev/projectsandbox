@@ -1,6 +1,10 @@
 // How to open the modal
+$(document).ready(function (){
+    $('#jokebox').modal()
+})
+
 $(document).ready(function(){
-    $('#openedbox').modal();
+    $('#dogebox').modal();
   });
 
 
@@ -23,28 +27,31 @@ function renderJoke(data) {
     $('#punchline').text(data.punchline);
 }
 
-function getaDoge () {
-    var dogeAPI = 'http://shibe.online/api/shibes?count=[1-100]&urls=true&httpsUrls=true'
-    fetch(dogeAPI)
-    .then(function (response){
-        return response.json()
-    })
-    .then(function (data2) {
-        console.log(data2)
-        renderDoge(data2)
-    });
-}
+// refresh button function
+// var getRefreshBtn = $('#refresh-btn')
+// getRefreshBtn.click(function() {
+//     location.reload();
+// });
 
-getaDoge()
+// function getaDoge () {
+//     var dogeAPI = 'http://shibe.online/api/shibes?count=[1-100]&urls=true&httpsUrls=true'
+//     fetch(dogeAPI)
+//     .then(function (response){
+//         return response.json()
+//     })
+//     .then(function (data2) {
+//         console.log(data2)
+//         renderDoge(data2)
+//     });
+// }
 
-function renderDoge (data2) {
-    $('#dogetime').attr('src', data2[0])
-}
+// getaDoge()
 
-var getRefreshBtn = $('#refresh-btn')
-getRefreshBtn.click(function() {
-    location.reload();
-});
+// function renderDoge (data2) {
+//     $('#dogetime').attr('src', data2[0])
+// }
+
+
 
 // Grabbing the inside value of the div (hopefully)
 // var relatedArtistSpot = $('#artist-spot').val();
