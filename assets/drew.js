@@ -37,6 +37,8 @@ function getaDoge () {
 
 getaDoge()
 
+
+
 function renderDoge (data2) {
     $('#dogetime').attr('src', data2[0])
 }
