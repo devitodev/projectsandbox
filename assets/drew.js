@@ -3,9 +3,9 @@ $(document).ready(function (){
     $('#jokebox').modal()
 })
 
-$(document).ready(function(){
-    $('#dogebox').modal();
-  });
+// $(document).ready(function(){
+//     $('#dogebox').modal();
+//   });
 
 
   function getaJoke() {
@@ -20,12 +20,34 @@ $(document).ready(function(){
         });
     }
 
-getaJoke()
+
 
 function renderJoke(data) {
-    $('#setup').text(data.setup);
-    $('#punchline').text(data.punchline);
+   
+    var grabSetup = document.querySelector('#setup');
+    var setupLocation = data.setup;
+   grabSetup.innerHTML = setupLocation;
+    
+    var grabPunchline = document.querySelector('#punchline');
+    var punclineLocation = data.punchline;
+    grabPunchline.innerHTML = punclineLocation;
+    
+    console.log()
+    
 }
+
+var jokeBtn = document.getElementById('joke-btn')
+
+
+jokeBtn.addEventListener('click', getaJoke)
+
+
+// function chooseNextJoke() {
+//     for(i = 0; i < data.length; i++) {
+        
+//     }
+// }
+
 
 // refresh button function
 // var getRefreshBtn = $('#refresh-btn')
