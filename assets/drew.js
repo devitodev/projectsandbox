@@ -1,12 +1,21 @@
+// Attempting to use multiple
+$(document).ready(function(){
+    $('select').formSelect();
+  });
+
+
 // How to open the modal
 $(document).ready(function (){
     $('#jokebox').modal()
 })
 
-// $(document).ready(function(){
-//     $('#dogebox').modal();
-//   });
+$(document).ready(function(){
+    $('#carousel-modal').modal();
+  });
 
+$(document).ready(function(){
+    $('.carousel').carousel();
+  });
 
   function getaJoke() {
         var jokeAPI = 'https://official-joke-api.appspot.com/random_joke'
